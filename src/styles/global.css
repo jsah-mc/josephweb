@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import 'tailwindcss';
+@theme {
+    --color-base: #11111b;
+    --color-text: #cdd6f4; 
+    --color-overlay: #181825;   
+    --color-primary: #89b4fa;    
+    --font-inter: 'Inter', monospace;
+}
+
+@layer components {
+    body {
+        @apply bg-base bg-[url(../assets/images/background.svg)] text-text pt-22 text-center m-auto font-inter;
+    }
+    .topbar {
+        @apply h-16 bg-overlay text-text flex items-center shadow-md fixed top-0 left-1/2 z-50 rounded-full mt-4 -translate-x-1/2 justify-center;
+    }
+    .topbar-leftstyle {
+        @apply h-16 bg-overlay text-text flex items-center shadow-md fixed top-0 z-50 rounded-full mt-4;
+    }
+    .topbar-center {
+        @apply flex items-center justify-center gap-12 w-full px-8;
+    }
+    .logo {
+        @apply flex flex-row font-bold text-xl tracking-wide;
+    }
+    .topbar-nav {
+        @apply flex gap-6 bg-base text-text rounded-full p-2;
+    }
+    .topbar-link {
+        @apply text-text hover:bg-text hover:text-base bg-overlay rounded-full p-2 transition-colors duration-200 font-medium hover:animate-pulse;
+        text-decoration: none;
+    }
+}
