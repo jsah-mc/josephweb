@@ -8,19 +8,19 @@ import Bars from "../components/Bars.astro"
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Im a noob</title>
+        <title>Joseph's Website</title>
 	</head>
 	<body>
 		<div class="content-wrapper">
 			<Bars />
 			<slot />
 		</div>
-		<footer class="footer w-screen bg-overlay">
+		<!-- <footer class="footer w-screen bg-overlay">
 			<p style="text-align: center; font-size: 0.8rem; padding: 1rem 0; color: var(--color-text);">
 				Made with ❤️ using
 				<a href="https://astro.build" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: none;">Astro</a>
 			</p>
-		</footer>
+		</footer> -->
 	</body>
 </html>
 
@@ -40,8 +40,5 @@ body {
 }
 .content-wrapper {
 	padding: 2rem;
-}
-.footer {
-	padding: 0 !important;
 }
 </style>
