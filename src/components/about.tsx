@@ -1,5 +1,5 @@
-import { Image } from 'astro:assets';
 import JosephAbout from '../assets/JosephAbout.jpg';
+
 export default function About() {
   return (<>
   <div className="pt-12 px-2 flex flex-row items-center justify-center min-h-screen gap-8">
