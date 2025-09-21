@@ -11,7 +11,7 @@ export default function RightSideTopBar() {
     </a>
   );
   return (
-    <div className="fixed right-4 top-4 h-16 bg-overlay text-text flex flex-row shadow-none z-50 p-2 rounded-full">
+    <div className="fixed right-0 top-0 h-16 bg-overlay text-text dark:bg-overlaydark dark:text-textdark flex flex-row shadow-none z-50 p-2 rounded-bl-4xl">
       <div className="flex flex-row gap-4 topbar-nav">
         <SidebarIcons
           label={<VscGithub size={20} />}

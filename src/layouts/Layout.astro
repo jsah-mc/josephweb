@@ -1,5 +1,6 @@
 ---
-import Bars from "../components/Bars.astro"
+import Bars from "../components/Bars.tsx"
+const { pathname } = Astro.url;
 ---
 <!doctype html>
 <html lang="en">
@@ -12,7 +13,7 @@ import Bars from "../components/Bars.astro"
 	</head>
 	<body>
 		<div class="content-wrapper">
-			<Bars />
+			<Bars pathname={pathname} client:load />
 			<slot />
 		</div>
 		<!-- <footer class="footer w-screen bg-overlay">

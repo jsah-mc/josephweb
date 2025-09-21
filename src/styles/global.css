@@ -1,37 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 @theme {
-  --color-base: #11111b;
-  --color-text: #cdd6f4;
-  --color-overlay: #181825;
-  --color-primary: #89b4fa;
+  --color-base: #dce0e0;
+  --color-text: #4c4f69;
+  --color-overlay: #e6e9ef;
+  --color-primary: #1e66f5;
+  --color-basedark: #11111b;
+  --color-textdark: #cdd6f4;
+  --color-overlaydark: #181825;
+  --color-primarydark: #89b4fa;
   --font-inter: "Inter", monospace;
 }
 
 @layer components {
   body {
-    @apply bg-base text-text pt-22 font-inter;
+    @apply bg-base text-text dark:bg-basedark dark:text-textdark justify-between mx-auto;
   }
   .topbar {
-    @apply h-16 bg-overlay text-text flex items-center shadow-md fixed top-4 right-1/2 transform-[x-1/2] z-50 rounded-full mt-4 justify-center;
+    @apply h-16 bg-overlay text-text dark:bg-overlaydark dark:text-textdark flex items-center shadow-none fixed top-0 right-1/2 transform-[x-1/2] z-50 rounded-bl-4xl rounded-br-4xl justify-center;
   }
   .topbar-leftstyle {
-    @apply h-16 bg-overlay text-text flex items-center shadow-md fixed top-4 z-50 rounded-full mt-4 left-4;
+    @apply h-16 bg-overlay text-text dark:bg-overlaydark dark:text-textdark flex items-center shadow-none fixed top-0 z-50 rounded-br-4xl left-0;
   }
   .topbar-rightstyle {
-    @apply h-16 bg-overlay text-text flex items-center shadow-none fixed top-4 right-4 z-50 rounded-full;
+    @apply h-16 bg-overlay text-text dark:bg-overlaydark dark:text-textdark flex items-center shadow-none fixed top-4 right-4 z-50 rounded-full;
   }
   .topbar-center {
-    @apply flex items-center justify-center gap-12 w-full px-8;
+    @apply flex items-center justify-center gap-12 w-full;
   }
   .logo {
     @apply flex flex-row font-bold text-xl tracking-wide;
   }
   .topbar-nav {
-    @apply flex gap-6 bg-base text-text rounded-full p-2;
+    @apply flex gap-6 bg-base text-text dark:bg-basedark dark:text-textdark rounded-full p-2;
   }
   .topbar-link {
-    @apply text-text hover:bg-text hover:text-base bg-overlay rounded-full p-2 transition-colors duration-200 font-medium hover:animate-pulse;
+    @apply text-text hover:bg-text hover:text-base dark:hover:bg-textdark dark:hover:text-basedark dark:bg-overlaydark dark:text-textdark bg-overlay rounded-full p-2 transition-colors duration-200 font-medium hover:animate-pulse;
     text-decoration: none;
   }
 }
