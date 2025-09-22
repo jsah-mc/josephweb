@@ -14,7 +14,7 @@
 
 @layer components {
   body {
-    @apply bg-base text-text dark:bg-basedark dark:text-textdark justify-between mx-auto;
+    @apply text-text dark:text-basedark bg-[url('/background.jpg')] justify-between mx-auto;
   }
   .topbar {
     @apply h-16 bg-overlay text-text dark:bg-overlaydark dark:text-textdark flex items-center shadow-none fixed top-0 right-1/2 transform-[x-1/2] z-50 rounded-bl-4xl rounded-br-4xl justify-center;
